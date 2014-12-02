@@ -13,6 +13,11 @@
 		E4D519E01A2DCB8F009CB995 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4D519DF1A2DCB8F009CB995 /* Images.xcassets */; };
 		E4D519E31A2DCB8F009CB995 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4D519E11A2DCB8F009CB995 /* LaunchScreen.xib */; };
 		E4D519EF1A2DCB8F009CB995 /* EfficientJSONBriefTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D519EE1A2DCB8F009CB995 /* EfficientJSONBriefTests.swift */; };
+		E4D519FC1A2DCBC2009CB995 /* FlickrFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D519FB1A2DCBC2009CB995 /* FlickrFetcher.m */; };
+		E4D51A031A2DCC15009CB995 /* JSONSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D519FD1A2DCC15009CB995 /* JSONSwift.swift */; };
+		E4D51A041A2DCC15009CB995 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D519FE1A2DCC15009CB995 /* Place.swift */; };
+		E4D51A051A2DCC15009CB995 /* RespondParse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D519FF1A2DCC15009CB995 /* RespondParse.swift */; };
+		E4D51A061A2DCC15009CB995 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D51A001A2DCC15009CB995 /* Result.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +41,14 @@
 		E4D519E81A2DCB8F009CB995 /* EfficientJSONBriefTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EfficientJSONBriefTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4D519ED1A2DCB8F009CB995 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E4D519EE1A2DCB8F009CB995 /* EfficientJSONBriefTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EfficientJSONBriefTests.swift; sourceTree = "<group>"; };
+		E4D519F91A2DCBC2009CB995 /* FlickrAPIkey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlickrAPIkey.h; sourceTree = "<group>"; };
+		E4D519FA1A2DCBC2009CB995 /* FlickrFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlickrFetcher.h; sourceTree = "<group>"; };
+		E4D519FB1A2DCBC2009CB995 /* FlickrFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlickrFetcher.m; sourceTree = "<group>"; };
+		E4D519FD1A2DCC15009CB995 /* JSONSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONSwift.swift; sourceTree = "<group>"; };
+		E4D519FE1A2DCC15009CB995 /* Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
+		E4D519FF1A2DCC15009CB995 /* RespondParse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RespondParse.swift; sourceTree = "<group>"; };
+		E4D51A001A2DCC15009CB995 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		E4D51A021A2DCC15009CB995 /* EfficientJSONBrief-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "EfficientJSONBrief-Bridging-Header.h"; path = "../EfficientJSONBrief/EfficientJSONBrief-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,7 +90,9 @@
 		E4D519D51A2DCB8F009CB995 /* EfficientJSONBrief */ = {
 			isa = PBXGroup;
 			children = (
-				E4D519D81A2DCB8F009CB995 /* AppDelegate.swift */,
+				E4D519F81A2DCBC2009CB995 /* Flickr */,
+				E4D51A081A2DCC4C009CB995 /* Model */,
+				E4D51A091A2DDAEF009CB995 /* JSONParse */,
 				E4D519DA1A2DCB8F009CB995 /* ViewController.swift */,
 				E4D519DC1A2DCB8F009CB995 /* Main.storyboard */,
 				E4D519DF1A2DCB8F009CB995 /* Images.xcassets */,
@@ -90,6 +105,7 @@
 		E4D519D61A2DCB8F009CB995 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E4D519D81A2DCB8F009CB995 /* AppDelegate.swift */,
 				E4D519D71A2DCB8F009CB995 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -110,6 +126,36 @@
 				E4D519ED1A2DCB8F009CB995 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E4D519F81A2DCBC2009CB995 /* Flickr */ = {
+			isa = PBXGroup;
+			children = (
+				E4D51A021A2DCC15009CB995 /* EfficientJSONBrief-Bridging-Header.h */,
+				E4D519F91A2DCBC2009CB995 /* FlickrAPIkey.h */,
+				E4D519FA1A2DCBC2009CB995 /* FlickrFetcher.h */,
+				E4D519FB1A2DCBC2009CB995 /* FlickrFetcher.m */,
+			);
+			name = Flickr;
+			path = ../Flickr;
+			sourceTree = "<group>";
+		};
+		E4D51A081A2DCC4C009CB995 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E4D519FE1A2DCC15009CB995 /* Place.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		E4D51A091A2DDAEF009CB995 /* JSONParse */ = {
+			isa = PBXGroup;
+			children = (
+				E4D519FD1A2DCC15009CB995 /* JSONSwift.swift */,
+				E4D519FF1A2DCC15009CB995 /* RespondParse.swift */,
+				E4D51A001A2DCC15009CB995 /* Result.swift */,
+			);
+			name = JSONParse;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,7 +259,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4D519DB1A2DCB8F009CB995 /* ViewController.swift in Sources */,
+				E4D51A031A2DCC15009CB995 /* JSONSwift.swift in Sources */,
+				E4D519FC1A2DCBC2009CB995 /* FlickrFetcher.m in Sources */,
+				E4D51A051A2DCC15009CB995 /* RespondParse.swift in Sources */,
+				E4D51A061A2DCC15009CB995 /* Result.swift in Sources */,
 				E4D519D91A2DCB8F009CB995 /* AppDelegate.swift in Sources */,
+				E4D51A041A2DCC15009CB995 /* Place.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +390,7 @@
 				INFOPLIST_FILE = EfficientJSONBrief/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "EfficientJSONBrief/EfficientJSONBrief-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -349,6 +401,7 @@
 				INFOPLIST_FILE = EfficientJSONBrief/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "EfficientJSONBrief/EfficientJSONBrief-Bridging-Header.h";
 			};
 			name = Release;
 		};

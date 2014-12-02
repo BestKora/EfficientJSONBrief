@@ -1,25 +1,29 @@
-//
+
 //  ViewController.swift
 //  EfficientJSONBrief
 //
-//  Created by Tatiana Kornilova on 12/2/14.
-//  Copyright (c) 2014 Tatiana Kornilova. All rights reserved.
-//
+
+//---- по статье http://robots.thoughtbot.com/efficient-json-in-swift-with-functional-concepts-and-generics
 
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        //--------------- URL для places из Flickr.com ------------------------------------------
+        
+        let urlPlaces  = NSURLRequest( URL: FlickrFetcher.URLforTopPlaces())
+        
+        performRequest(urlPlaces ) { (places: Result<Places>) in
+            println("\(stringResult(places))")
+            
+            
+        }
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
 }
+
+// ---------- БУДЬТЕ ВНИМАТЕЛЬНЫ - КОМПИЛИРУЕТСЯ около 1 минуты--------
+
 
