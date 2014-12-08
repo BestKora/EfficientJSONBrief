@@ -10,18 +10,19 @@ import Foundation
 
 // ---- Модель Place ----
 
-struct Place: Printable  {
+struct Place {
+    
     let placeURL: NSURL
     let timeZone: String
     let photoCount : Int
     let content : String
-    
-    var description :String {
-      return "Place { placeURL = \(placeURL), timeZone = \(timeZone), photoCount = \(photoCount),content = \(content)} \n"
-    }
+
 }
 
-extension Place: JSONDecodable {
+extension Place: Printable, JSONDecodable {
+    var description :String {
+        return "Place { placeURL = \(placeURL), timeZone = \(timeZone), photoCount = \(photoCount),content = \(content)} \n"
+    }
 
     static func create(placeURL: String)(timeZone: String)(photoCount: String)(content: String) -> Place {
         return Place(placeURL: toURL(placeURL), timeZone: timeZone, photoCount: photoCount.toInt() ?? 0,content: content)
@@ -45,22 +46,21 @@ func toURL(urlString: String) -> NSURL {
 
 // ---- Модель Places ----
 
-struct Places: Printable {
-    
+struct Places{
     var places : [Place]
+}
+
+extension Places: Printable, JSONDecodable {
     
     var description :String  { get {
         var str: String = ""
-            for place in self.places {
-             str = str +  "\(place) \n"
-            }
-          return str
+        for place in self.places {
+            str = str +  "\(place) \n"
+        }
+        return str
         }
     }
-}
-
-extension Places: JSONDecodable {
-    
+   
     static func create(places: [Place]) -> Places {
         return Places(places: places)
     }

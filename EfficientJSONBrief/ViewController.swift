@@ -17,13 +17,11 @@ class ViewController: UIViewController {
         let urlPlaces  = NSURLRequest( URL: FlickrFetcher.URLforTopPlaces())
         
         performRequest(urlPlaces ) { (places: Result<Places>) in
-            println("\(stringResult(places))")
-            
+            println("\(stringResult(places))")            
             
         }
     }
 }
 
-// ---------- БУДЬТЕ ВНИМАТЕЛЬНЫ - КОМПИЛИРУЕТСЯ около 1 минуты--------
 
 

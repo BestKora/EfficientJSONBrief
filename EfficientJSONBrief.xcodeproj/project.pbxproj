@@ -388,6 +388,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = EfficientJSONBrief/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "EfficientJSONBrief/EfficientJSONBrief-Bridging-Header.h";
@@ -399,6 +400,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = EfficientJSONBrief/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "EfficientJSONBrief/EfficientJSONBrief-Bridging-Header.h";
@@ -418,6 +420,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = EfficientJSONBriefTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EfficientJSONBrief.app/EfficientJSONBrief";
@@ -433,6 +436,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = EfficientJSONBriefTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EfficientJSONBrief.app/EfficientJSONBrief";
@@ -458,6 +462,7 @@
 				E4D519F41A2DCB8F009CB995 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E4D519F51A2DCB8F009CB995 /* Build configuration list for PBXNativeTarget "EfficientJSONBriefTests" */ = {
 			isa = XCConfigurationList;
@@ -466,6 +471,7 @@
 				E4D519F71A2DCB8F009CB995 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
